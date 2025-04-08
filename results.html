@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sonuçlar</title>
+</head>
+<body>
+  <h2>"{{ keyword }}" için Sonuçlar:</h2>
+  {% if urunler %}
+    <ul>
+      {% for urun in urunler %}
+        <li><a href="{{ urun.link }}" target="_blank">{{ urun.baslik }}</a> - {{ urun.fiyat }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Sonuç bulunamadı.</p>
+  {% endif %}
+  <br>
+  <a href="/">Yeni Arama</a>
+</body>
+</html>
