@@ -43,7 +43,6 @@ def ara():
 
     driver.quit()
     return render_template("results.html", keyword=keyword, urunler=urunler)
-
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 10000))  # Render'ın verdiği port
+    app.run(host="0.0.0.0", port=port, debug=True)
